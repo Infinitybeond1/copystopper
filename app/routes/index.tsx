@@ -26,7 +26,7 @@ export default function Index() {
           </h2>
           <h3>
             <center>
-              Character Limit: 500
+              Character Limit: 100
             </center>
           </h3>
         </div>
