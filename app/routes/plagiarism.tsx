@@ -1,8 +1,8 @@
 import { Outlet } from "@remix-run/react";
-export default function Plagarism() {
+export default function Plagiarism() {
   return (
     <>
-      <h1>Plagarism Checker</h1>
+      <h1>Plagiarism Checker</h1>
       <Outlet />
     </>
   );

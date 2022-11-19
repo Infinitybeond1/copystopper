@@ -16,7 +16,7 @@ export default function Index() {
         <div className="grid align-content-center">
           <h1>
             <center>
-              Plagarism Checker!
+              Plagiarism Checker!
             </center>
           </h1>
           <h2>
@@ -31,7 +31,7 @@ export default function Index() {
           </h3>
         </div>
         <div className="flex items-center justify-center">
-          <form action="/plagarism" method="get">
+          <form action="/plagiarism" method="get">
             <body>
               <textarea className="text-md bg-slate-300 text-slate-800 dark:bg-slate-800 dark:text-slate-300 p-3 rounded-3xl"
                 defaultValue={"Enter text"}

@@ -1,6 +1,7 @@
 import { redirect } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import axios from "axios";
+import axios from "axios"
+import config from "../../config.json"
 
 export default function Index() {
     const data = useLoaderData();
@@ -25,7 +26,7 @@ export async function loader({ request }) {
             url: 'https://plagiarism-checker-and-auto-citation-generator-multi-lingual.p.rapidapi.com/plagiarism',
             headers: {
                 'content-type': 'application/json',
-                'X-RapidAPI-Key': 'bb0f4ded99mshe259f59845b58a4p11bd55jsnc5484e03bb3b',
+                'X-RapidAPI-Key': config["api-key"],
                 'X-RapidAPI-Host': 'plagiarism-checker-and-auto-citation-generator-multi-lingual.p.rapidapi.com'
             },
             data: `{"text":"${text}","language":"en","includeCitations":false,"scrapeSources":false}`
