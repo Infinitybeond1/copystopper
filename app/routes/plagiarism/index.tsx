@@ -16,10 +16,11 @@ export async function loader({ request }) {
     try {
         const url = new URL(request.url);
         const search = new URLSearchParams(url.search);
-        if (!search.get("text")) return redirect("/");
+        if (!search.get("text")) return redirect("/errornull");
         const text = search.get("text");
+
         if (text?.length > 100) {
-            return redirect("/error")
+            return redirect("/errorlenght")
         }
         const options = {
             method: 'POST',

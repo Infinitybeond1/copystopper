@@ -5,13 +5,8 @@ import config from "../config.json"
 
 export default function Index() {
   const [text, setName] = useState('');
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-
-    console.log(await check(text))
-  }
   return (
-    <div className="h-screen bg-slate-300 text-slate-800 dark:bg-slate-800 dark:text-slate-300">
+    <div className="h-screen bg-white text-black dark:bg-black dark:text-white">
       <div className="h-screen text-lg">
         <div className="grid align-content-center">
           <h1>
@@ -30,10 +25,10 @@ export default function Index() {
             </center>
           </h3>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center m-5">
           <form action="/plagiarism" method="get">
             <body>
-              <textarea className="text-md bg-slate-300 text-slate-800 dark:bg-slate-800 dark:text-slate-300 p-3 rounded-3xl"
+              <textarea className="focus:border-accent-light focus:ring-accent-dark focus:outline-none focus:ring focus:ring-opacity-40 text-md bg-slate-300 text-black bg-white dark:bg-black dark:text-white p-3 rounded-3xl"
                 defaultValue={"Enter text"}
                 onChange={(e) => setName(e.target.value)}
                 value={text}
@@ -41,8 +36,7 @@ export default function Index() {
               >
               </textarea>
             </body>
-            <br />
-            <button type="submit" className="text-center">Submit</button>
+            <button type="submit" className="text-center w-full bg-accent-light text-black dark:bg-accent-dark dark:text-white px-3 py-1 rounded-3xl">Submit</button>
           </form>
           <Outlet />
         </div>

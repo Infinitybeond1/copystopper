@@ -1,6 +1,5 @@
 import { Outlet } from "@remix-run/react";
-
-var errorJson = {"message": "Message to long, please try again with only 100 charecters"}
+var errorJson = {"message": "No text was provided, please go back to the homepage and enter some text"}
 
 export default function Error() {
   return (
